@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+
+
+    <style>
+
+        textarea {
+
+            margin: 10px;
+
+            width: 400px;
+
+            height: 120px;
+
+            font-size: 20px;
+
+            font-family: monospace;
+
+        }
+
+
+
+        .error{color:red;}
+
+    </style>
+
+
+
+    <h1>New Post</h1>
+
+
+
+    <form method='post'>
+
+        <p>Title for your new blog:</p>
+
+        <input type="text" name='blog' />
+
+        <span class="error">{{title_error}}</span> 
+
+        
+
+        <br><br>
+
+
+
+        <p>Your new blog:</p>
+
+        <textarea name='body'></textarea>
+
+        <span class="error">{{body_error}}</span> 
+
+        
+
+        <br><br>
+
+
+
+        <input type="submit" value='Submit' />
+
+        
+
+    </form>
+
+
+
+{% endblock %}

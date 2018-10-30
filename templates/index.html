@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+
+
+    <h1>Blog Users!</h1>
+
+    <form action="/" method='post'>
+
+
+
+            {% for i in users %}
+
+                <ul>
+
+                    <li> <a href='./blog?user={{i.id}}'>{{i.username}}</a></li>
+
+                </ul>   
+
+            {% endfor %}
+
+    </form>
+
+
+
+{% endblock %}
