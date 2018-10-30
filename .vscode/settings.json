@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:\\ProgramData\\Miniconda3\\envs\\flask-env\\python.exe"
+    "python.pythonPath": "C:\\ProgramData\\Miniconda3\\envs\\flask-env\\python.exe",
+    "python.linting.enabled": false
 }

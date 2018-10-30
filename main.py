@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 app.config['DEBUG'] = True
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://blogzz:endofchapter2@localhost:8889/blogzz'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://blogz:endofchapter2@localhost:8889/blogz'
 
 app.config['SQLALCHEMY_ECHO'] = True
 
@@ -106,7 +106,7 @@ def login():
 
             flash("Logged in")
 
-            return render_template('new_post.html',title="Blogz!")
+            return render_template('newpost.html',title="Blogz!")
 
         else:
 
@@ -180,8 +180,8 @@ def signup():
 
                 session['username'] = username
 
-                return render_template('new_post.html',title="Blogz!")
-
+                # return render_template('newpost.html',title="Blogz!")
+                return redirect('/newpost')
             else:
 
                 flash('Username already exists!')
@@ -240,7 +240,7 @@ def newpost():
 
                 
 
-    return render_template('new_post.html',title="Blogz!")
+    return render_template('newpost.html',title="Blogz!")
 
   
 
